@@ -41,7 +41,7 @@ const addContact = async (body) => {
   const id = nanoid();
   const newContact = { id, ...body };
   const data = JSON.stringify([newContact, ...list]);
-  await fs.writeFile(contactsPath, data);
+  await fs.writeFile(metodPath, data);
   return newContact;
 };
 
@@ -52,7 +52,7 @@ const updateContact = async (contactId, body) => {
     return null;
   }
   list[index] = { id: contactId, ...body };
-  await fs.writeFile(contactsPath, JSON.stringify(list));
+  await fs.writeFile(metodPath, JSON.stringify(list));
   return list[index];
 };
 

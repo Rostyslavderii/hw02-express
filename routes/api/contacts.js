@@ -79,6 +79,7 @@ router.put('/:contactId', async (req, res, next) => {
   try {
     const { contactId } = req.params;
     const data = req.body;
+    console.log(data);
     if (!data) {
       res.status(404).json({
         message: 'No contact found'
