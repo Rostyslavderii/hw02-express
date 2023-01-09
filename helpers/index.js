@@ -1,7 +1,7 @@
-const { cntrlWrapper } = require('./cntrlWrapper.js');
+const { asyncWrapper } = require('./asyncWrapper.js');
 const { HttpError } = require('./httpError.js');
 const { mongoosError } = require('./mongoosError.js');
 
 
-module.exports = { cntrlWrapper, mongoosError, HttpError };
+module.exports = { asyncWrapper, mongoosError, HttpError };
     
