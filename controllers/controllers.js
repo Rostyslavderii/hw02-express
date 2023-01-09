@@ -1,6 +1,6 @@
 const HttpError = require('../helpers');
 const { Contact } = require('../models/contacts.js');
-const { cntrlWrapper } = require('../helpers');
+const { asyncWrapper } = require('../helpers');
 
 
 
@@ -61,10 +61,10 @@ const updateFavoriteStatus = async (req, res) => {
 };
 
 module.exports = {
-    getAll: cntrlWrapper(getAll),
-    getById: cntrlWrapper(getById),
-    addNewContact: cntrlWrapper(addNewContact),
-    deleteContact: cntrlWrapper(deleteContact),
-    updateContactById: cntrlWrapper(updateContactById),
-    updateFavoriteStatus: cntrlWrapper(updateFavoriteStatus),
+    getAll: asyncWrapper(getAll),
+    getById: asyncWrapper(getById),
+    addNewContact: asyncWrapper(addNewContact),
+    deleteContact: asyncWrapper(deleteContact),
+    updateContactById: asyncWrapper(updateContactById),
+    updateFavoriteStatus: asyncWrapper(updateFavoriteStatus),
 }
